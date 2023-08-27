@@ -1,4 +1,4 @@
-package com.example.diary;
+/*package com.example.diary;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -64,4 +64,4 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-}
+}*/

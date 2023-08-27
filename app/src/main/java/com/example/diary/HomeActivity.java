@@ -20,7 +20,15 @@ import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
 import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
 import com.prolificinteractive.materialcalendarview.OnRangeSelectedListener;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Collections;
+import android.os.AsyncTask;
 import java.util.List;
 
 public class HomeActivity extends Fragment {
@@ -62,4 +70,5 @@ public class HomeActivity extends Fragment {
         //날짜에 맞는 데이터를 가지고 와서 밑에 일정 표시
         return view;
     }
+
 }
