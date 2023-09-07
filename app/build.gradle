@@ -25,6 +25,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    useLibrary 'org.apache.http.legacy'
 }
 
 dependencies {
@@ -38,4 +39,5 @@ dependencies {
     implementation 'com.prolificinteractive:material-calendarview:1.4.3'
     implementation 'com.jakewharton.threetenabp:threetenabp:1.1.1'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
 }

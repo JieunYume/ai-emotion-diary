@@ -1,12 +1,17 @@
-/*package com.example.diary;
+package com.example.diary;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -25,10 +30,12 @@ public class MainActivity extends AppCompatActivity {
     public FloatingActionButton floatingActionButton;
 
     private HomeActivity fragmentHome = new HomeActivity();     //홈
-    private PlayListActivity fragmentPlayList = new PlayListActivity();
-    private StatsActivity fragmentStats=new StatsActivity();
-    private MyPageActivity fragmentMyPage=new MyPageActivity();
-    private WriteActivity fragmentWrite=new WriteActivity();
+    CheckEmotionDialog checkEmotionDialog=(CheckEmotionDialog) CheckEmotionDialog.checkEmotionDialog;
+    private String memberId;
+    //private PlayListActivity fragmentPlayList = new PlayListActivity();
+    //private StatsActivity fragmentStats=new StatsActivity();
+    //private MyPageActivity fragmentMyPage=new MyPageActivity();
+    //private WriteActivity fragmentWrite=new WriteActivity();
 
 
     @Override
@@ -41,7 +48,26 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().add(R.id.containers, fragmentHome).commit();
 
-        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+        Intent intent=getIntent();
+        memberId=intent.getStringExtra("memberId");
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkEmotionDialog=new CheckEmotionDialog(view.getContext());
+                WindowManager.LayoutParams params=checkEmotionDialog.getWindow().getAttributes();
+                params.width=WindowManager.LayoutParams.WRAP_CONTENT;
+                params.height=WindowManager.LayoutParams.WRAP_CONTENT;
+                checkEmotionDialog.getWindow().setAttributes((WindowManager.LayoutParams)params);
+                checkEmotionDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                checkEmotionDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                checkEmotionDialog.setId(memberId);
+                checkEmotionDialog.show();
+            }
+        });
+
+
+        /*bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
@@ -61,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             }
-        });
+        });*/
 
     }
-}*/
+}

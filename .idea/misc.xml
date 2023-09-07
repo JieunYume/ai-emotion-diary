@@ -4,20 +4,30 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/drawable/brown_edge.xml" value="0.1475" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/drawable/button_private_group.xml" value="0.149" />
+        <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/drawable/gray_edge.xml" value="0.1475" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/drawable/round.xml" value="0.1225" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/drawable/round_edge.xml" value="0.1" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/drawable/white_gray_solid.xml" value="0.1335" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/drawable/white_gray_solid_item.xml" value="0.1225" />
+        <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/drawable/writting_card.xml" value="0.1395" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/font/font.xml" value="0.23981481481481481" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/acitvity_home.xml" value="0.2" />
+        <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_check_emotion_dialog.xml" value="0.536" />
+        <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_diary_initial.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_email_verify.xml" value="0.176" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_home.xml" value="0.15217391304347827" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_join.xml" value="0.2" />
+        <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_join2.xml" value="0.11354166666666667" />
+        <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_join_diary.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_login.xml" value="0.21829710144927536" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_login2.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_make_diary.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_write.xml" value="0.20969202898550723" />
+        <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_writing.xml" value="0.16799999999999998" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/diary_item.xml" value="0.2" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/email_check.xml" value="0.24365942028985507" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/fruit_item.xml" value="0.264" />
