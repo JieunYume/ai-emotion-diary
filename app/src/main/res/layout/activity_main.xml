@@ -47,8 +47,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
                 android:clickable="true"
+                app:borderWidth="0dp"
                 android:paddingBottom="20dp"
                 app:fabSize="normal"
+                android:backgroundTint="#554FFC"
                 app:srcCompat="@drawable/write_icon" />
         </RelativeLayout>
     </FrameLayout>

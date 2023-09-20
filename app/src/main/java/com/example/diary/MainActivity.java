@@ -32,8 +32,10 @@ public class MainActivity extends AppCompatActivity {
     private HomeActivity fragmentHome = new HomeActivity();     //홈
     CheckEmotionDialog checkEmotionDialog=(CheckEmotionDialog) CheckEmotionDialog.checkEmotionDialog;
     private String memberId;
-    //private PlayListActivity fragmentPlayList = new PlayListActivity();
-    //private StatsActivity fragmentStats=new StatsActivity();
+    private String nickName;
+    private String filePath;
+    private PlayListActivity fragmentPlayList = new PlayListActivity();
+    private StaticsActivity fragmentStats=new StaticsActivity();
     //private MyPageActivity fragmentMyPage=new MyPageActivity();
     //private WriteActivity fragmentWrite=new WriteActivity();
 
@@ -45,11 +47,16 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom);
         floatingActionButton=findViewById(R.id.floatingActionButton);
-
-        getSupportFragmentManager().beginTransaction().add(R.id.containers, fragmentHome).commit();
-
         Intent intent=getIntent();
         memberId=intent.getStringExtra("memberId");
+        nickName=intent.getStringExtra("nickName");
+        filePath=intent.getStringExtra("filePath");
+
+        getSupportFragmentManager().beginTransaction().add(R.id.containers, fragmentHome).commit();
+        //fragmentHome.setUser_info(memberId, filePath, nickName);
+        fragmentHome.setUser_info(memberId, null, nickName);
+
+
 
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,33 +68,36 @@ public class MainActivity extends AppCompatActivity {
                 checkEmotionDialog.getWindow().setAttributes((WindowManager.LayoutParams)params);
                 checkEmotionDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 checkEmotionDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                checkEmotionDialog.setId(memberId);
+                checkEmotionDialog.setId(memberId, filePath, nickName);
                 checkEmotionDialog.show();
             }
         });
 
 
-        /*bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
+                    case R.id.home:
+                        getSupportFragmentManager().beginTransaction().add(R.id.containers, fragmentHome).commit();
+                        break;
                     case R.id.playlist:
                         getSupportFragmentManager().beginTransaction().replace(R.id.containers, fragmentPlayList).commit();
                         break;
                     case R.id.stats:
                         getSupportFragmentManager().beginTransaction().replace(R.id.containers, fragmentStats).commit();
                         break;
-                    case R.id.setting:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.containers, fragmentMyPage).commit();
-                        break;
-                    case R.id.floatingActionButton:
+                    //case R.id.setting:
+                        //getSupportFragmentManager().beginTransaction().replace(R.id.containers, fragmentMyPage).commit();
+                        //break;
+                    /*case R.id.floatingActionButton:
                         getSupportFragmentManager().beginTransaction().replace(R.id.containers, fragmentWrite).commit();
-                        break;
+                        break;*/
                 }
                 return true;
 
             }
-        });*/
+        });
 
     }
 }

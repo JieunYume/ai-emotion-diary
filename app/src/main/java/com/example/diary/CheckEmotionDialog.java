@@ -26,15 +26,18 @@ public class CheckEmotionDialog  extends Dialog {
     private ImageView iv_embressed;
     private Context context;
     private String memberId;
-
+    private String filePath;
+    private String nickName;
 
     public static Object checkEmotionDialog;
     public CheckEmotionDialog(@NonNull Context context) {
         super(context);
         this.context = context;
     }
-    public void setId(String memberId){
+    public void setId(String memberId, String filePath, String nickName){
         this.memberId=memberId;
+        this.filePath=filePath;
+        this.nickName=nickName;
     }
 
     protected void onCreate(Bundle savedInstanceState){
@@ -46,12 +49,12 @@ public class CheckEmotionDialog  extends Dialog {
 
         bt_cancel=findViewById(R.id.bt_cancel);
         iv_happy=findViewById(R.id.iv_happy);
-        iv_proud=findViewById(R.id.iv_proud);
         iv_sad=findViewById(R.id.iv_sad);
         iv_angry=findViewById(R.id.iv_angry);
         iv_nervous=findViewById(R.id.iv_nervous);
         iv_wound=findViewById(R.id.iv_wound);
         iv_embressed=findViewById(R.id.iv_embressed);
+        iv_proud=findViewById(R.id.iv_proud);
 
         iv_happy.setOnClickListener(new View.OnClickListener() {   //이름 변경
             @Override
@@ -61,7 +64,10 @@ public class CheckEmotionDialog  extends Dialog {
                 //rfid id 넘겨받아야함
                 intent.putExtra("moodEmojiName", "happy");
                 intent.putExtra("memberId", memberId);
+                intent.putExtra("nickName", nickName);
+                intent.putExtra("filePath", filePath);
                 getContext().startActivity(intent);
+                dismiss();
 
             }
         });
@@ -73,7 +79,25 @@ public class CheckEmotionDialog  extends Dialog {
                 //rfid id 넘겨받아야함
                 intent.putExtra("moodEmojiName", "proud");
                 intent.putExtra("memberId", memberId);
+                intent.putExtra("nickName", nickName);
+                intent.putExtra("filePath", filePath);
                 getContext().startActivity(intent);
+                dismiss();
+
+            }
+        });
+        iv_wound.setOnClickListener(new View.OnClickListener() {   //이름 변경
+            @Override
+            public void onClick(View view) {
+
+                Intent intent=new Intent(getContext(), WritingActivity.class);
+                //rfid id 넘겨받아야함
+                intent.putExtra("moodEmojiName", "hurt");
+                intent.putExtra("memberId", memberId);
+                intent.putExtra("nickName", nickName);
+                intent.putExtra("filePath", filePath);
+                getContext().startActivity(intent);
+                dismiss();
 
             }
         });
@@ -85,7 +109,10 @@ public class CheckEmotionDialog  extends Dialog {
                 //rfid id 넘겨받아야함
                 intent.putExtra("moodEmojiName", "sad");
                 intent.putExtra("memberId", memberId);
+                intent.putExtra("nickName", nickName);
+                intent.putExtra("filePath", filePath);
                 getContext().startActivity(intent);
+                dismiss();
 
             }
         });
@@ -97,7 +124,10 @@ public class CheckEmotionDialog  extends Dialog {
                 //rfid id 넘겨받아야함
                 intent.putExtra("moodEmojiName", "angry");
                 intent.putExtra("memberId", memberId);
+                intent.putExtra("nickName", nickName);
+                intent.putExtra("filePath", filePath);
                 getContext().startActivity(intent);
+                dismiss();
 
             }
         });
@@ -107,9 +137,12 @@ public class CheckEmotionDialog  extends Dialog {
 
                 Intent intent=new Intent(getContext(), WritingActivity.class);
                 //rfid id 넘겨받아야함
-                intent.putExtra("moodEmojiName", "nervous");
+                intent.putExtra("moodEmojiName", "anxiety");
                 intent.putExtra("memberId", memberId);
+                intent.putExtra("nickName", nickName);
+                intent.putExtra("filePath", filePath);
                 getContext().startActivity(intent);
+                dismiss();
 
             }
         });
@@ -119,9 +152,12 @@ public class CheckEmotionDialog  extends Dialog {
 
                 Intent intent=new Intent(getContext(), WritingActivity.class);
                 //rfid id 넘겨받아야함
-                intent.putExtra("moodEmojiName", "embressed");
+                intent.putExtra("moodEmojiName", "flustered");
                 intent.putExtra("memberId", memberId);
+                intent.putExtra("nickName", nickName);
+                intent.putExtra("filePath", filePath);
                 getContext().startActivity(intent);
+                dismiss();
 
             }
         });

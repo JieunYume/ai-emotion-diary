@@ -11,6 +11,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -24,11 +31,13 @@ public class WritingActivity extends AppCompatActivity {
     private TextView tv_date;
     private EditText et_happen;
     private EditText et_emotion;
+    RequestQueue queue;
+    int flag=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_writing);
-        bt_check=findViewById(R.id.bt_check);
+        bt_check=findViewById(R.id.bt_crop);
         bt_back=findViewById(R.id.bt_back);
         tv_date=findViewById(R.id.tv_date);
         et_happen=findViewById(R.id.et_happen);
@@ -43,11 +52,20 @@ public class WritingActivity extends AppCompatActivity {
 
         tv_date.setText(getTime);
         Intent intent=getIntent();
-        //String memberId=intent.getStringExtra("memberId");  //앞전 화면에서 memberId를 받아오고
-        //String moodEmojiName=intent.getStringExtra("moodEmojiName");  //앞전 화면에서 moodEmojiName을 받아옴
-        String memberId="1";
-        String moodEmojiName="happy";
+        String memberId=intent.getStringExtra("memberId");  //앞전 화면에서 memberId를 받아오고
+        String moodEmojiName=intent.getStringExtra("moodEmojiName");  //앞전 화면에서 moodEmojiName을 받아옴
+        String nickName=intent.getStringExtra("nickName");  //앞전 화면에서 moodEmojiName을 받아옴
+        String filePath=intent.getStringExtra("filePath");  //앞전 화면에서 moodEmojiName을 받아옴
+        //int memberId=2;
+        //String moodEmojiName="happy";
         Log.d("memberId, MoodEmoji", memberId+", "+ moodEmojiName);
+
+        if(queue==null)
+        {
+
+            queue= Volley.newRequestQueue(this);
+        }
+        String url="http://43.202.124.240:8080/api/v1/diary/";
 
 
         bt_check.setOnClickListener(new View.OnClickListener() {
@@ -56,17 +74,64 @@ public class WritingActivity extends AppCompatActivity {
                 //cehck
 
 
+
                 String user_happen=et_happen.getText().toString();
                 String user_emotion=et_emotion.getText().toString();
                 JSONObject jObj = new JSONObject();
 
+
                 if(!(user_happen.equals("")&&user_emotion.equals("")))
                 {
+
+
+
+                    try{
+
+
+                        jObj.put("memberId", memberId);
+                        jObj.put("moodEmojiName", moodEmojiName);
+                        jObj.put("thing", user_happen);
+                        jObj.put("impression", user_emotion);
+                        Log.d("url", url);
+                        Log.d("jobj", jObj+"");
+                        JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.POST, url, jObj, new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                Log.d("test_volley", response+"");
+                                try{
+                                    String d=response.getString("diaryId");
+                                    Intent intent=new Intent(WritingActivity.this, Diary_resultActivity.class);
+                                    intent.putExtra("memberId", memberId);
+                                    intent.putExtra("diaryId", d);
+                                    intent.putExtra("flag", "1");
+                                    startActivity(intent);
+                                    finish();
+                                }catch(JSONException e){
+
+                                }
+
+                            }}, new Response.ErrorListener(){
+                            @Override
+                            public void onErrorResponse(VolleyError error){
+                                Log.d("test_volley", "error");
+                            }
+
+                        });
+
+                        queue.add(jsonObjectRequest);
+
+                    }
+                    catch(JSONException E)
+                    {
+
+                    }
 
                     //api부르고 저장하고 home화면으로 돌아가게
                     //보내야하는 데이터 memberId, moodEmojiName, thing, impression
 
-                    try{
+
+
+                   /*try{
                         jObj.put("memberId", memberId);
                         jObj.put("moodEmojiName", moodEmojiName);
                         jObj.put("thing", user_happen);
@@ -120,7 +185,8 @@ public class WritingActivity extends AppCompatActivity {
                     catch(JSONException e)
                     {
 
-                    }
+                    }*/
+
 
                 }
                 else
@@ -130,6 +196,12 @@ public class WritingActivity extends AppCompatActivity {
                 }
 
 
+            }
+        });
+        bt_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
 

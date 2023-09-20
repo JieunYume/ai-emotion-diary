@@ -27,12 +27,11 @@
 
 
                 <LinearLayout
-                    android:id="@+id/btn_back"
+                    android:id="@+id/bt_cancel"
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="14dp"
+                    android:layout_marginRight="10dp"
                     android:gravity="center">
 
                     <ImageView
@@ -99,7 +98,7 @@
                     android:textSize="18dp" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName"
+                    android:id="@+id/et_code"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginTop="55dp"
@@ -111,7 +110,7 @@
                      />
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/bt_join"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="70dp"

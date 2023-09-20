@@ -15,7 +15,8 @@
         <LinearLayout
             android:id="@+id/top_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
 
             <LinearLayout
                 android:id="@+id/bt_back"
@@ -50,7 +51,7 @@
                 android:textSize="23dp" />
 
             <LinearLayout
-                android:id="@+id/bt_check"
+                android:id="@+id/bt_crop"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"

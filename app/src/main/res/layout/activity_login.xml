@@ -94,7 +94,8 @@
                     android:gravity="center_vertical"
                     android:hint="비밀번호를 입력하세요"
                     android:paddingLeft="20dp"
-                    android:textSize="18dp"/>
+                    android:textSize="18dp"
+                    android:inputType="textPassword"/>
 
 
             </LinearLayout>

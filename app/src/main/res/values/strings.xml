@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">diary</string>
+    <string name="kako_scheme" translatable="false">kakaoe2ddfdd74a158d75afa34dffac7f9e78</string>
+    <string name="kako_share_app_key" translatable="false">e2ddfdd74a158d75afa34dffac7f9e78</string>
 </resources>

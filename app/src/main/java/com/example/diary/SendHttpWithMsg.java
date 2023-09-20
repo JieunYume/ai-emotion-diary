@@ -35,6 +35,7 @@ public class SendHttpWithMsg {
         HttpConnectionParams.setSoTimeout(params, 3000);
 
         post.setHeader("Content-type", "application/json; charset=utf-8");
+        //headers.put("Content-Type","application/x-www-form-urlencoded");
 
 
 
@@ -75,6 +76,8 @@ public class SendHttpWithMsg {
             //httpPost 를 서버로 보내고 응답을 받습니다.
             HttpResponse response = client.execute(post);
 
+
+            Log.d("resss", response+"");
             // 받아온 응답으로부터 내용을 받아옵니다.
 
             // 단순한 string으로 읽어와 그내용을 리턴해줍니다.

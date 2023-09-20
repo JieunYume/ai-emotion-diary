@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class JoinActivity extends AppCompatActivity {
+/*public class JoinActivity extends AppCompatActivity {
 
     ImageView img;
     EditText et_id;
@@ -101,4 +101,4 @@ public class JoinActivity extends AppCompatActivity {
 
         }
     }
-}
+}*/
