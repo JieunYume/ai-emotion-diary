@@ -87,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/poorstory"
-                    android:text="총 6개"
+                    android:text="총 3개"
                     android:textAlignment="center"
                     android:textSize="15dp" />
             </LinearLayout>

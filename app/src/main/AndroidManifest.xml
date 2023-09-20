@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Diary"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".PlaylistDetailActivity"
             android:exported="false" />
         <activity
@@ -43,7 +46,7 @@
             android:name=".WritingActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".TitleActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

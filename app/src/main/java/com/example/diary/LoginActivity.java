@@ -146,6 +146,7 @@ public class LoginActivity extends AppCompatActivity {
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                             //HomeActivity homeActivity=new HomeActivity();
                             //homeActivity.setUser_info(memberId, filePath);
+                            Log.d("urlurl", filePath);
 
                             intent.putExtra("nickName", nickName);
                             intent.putExtra("filePath", filePath);

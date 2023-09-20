@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().add(R.id.containers, fragmentHome).commit();
         //fragmentHome.setUser_info(memberId, filePath, nickName);
-        fragmentHome.setUser_info(memberId, null, nickName);
+        fragmentHome.setUser_info(memberId, filePath, nickName);
 
 
 

@@ -89,34 +89,35 @@
 
             <EditText
                 android:id="@+id/et_happen"
-                android:layout_width="match_parent"
+                android:layout_width="370dp"
                 android:layout_height="180dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@drawable/writting_card"
-                android:ems="10"
                 android:gravity="top"
                 android:paddingTop="20dp"
                 android:paddingLeft="20dp"
-                android:inputType="textPersonName"
+                android:inputType="textMultiLine"
                 android:hint="1. 오늘 어떤 일이 있었나요?"
-                android:textColor="#6E5E5E"/>
+                android:textColor="#6E5E5E"
+                android:scrollHorizontally="false"
+                />
 
             <EditText
                 android:layout_marginTop="20dp"
                 android:id="@+id/et_emotion"
-                android:layout_width="match_parent"
+                android:layout_width="370dp"
                 android:layout_height="180dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@drawable/writting_card"
-                android:ems="10"
                 android:gravity="top"
                 android:paddingTop="20dp"
                 android:paddingLeft="20dp"
-                android:inputType="textPersonName"
+                android:inputType="textMultiLine"
                 android:hint="2. 어떤 감정과 생각이 들었나요?"
-                android:textColor="#6E5E5E"/>
+                android:textColor="#6E5E5E"
+                android:scrollHorizontally="false"/>
         </LinearLayout>
 
     </LinearLayout>

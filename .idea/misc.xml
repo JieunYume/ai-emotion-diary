@@ -10,6 +10,7 @@
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/drawable/gray_edge.xml" value="0.1475" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/drawable/grey_edge.xml" value="0.1505" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/drawable/name_dialog.xml" value="0.1515" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/drawable/right_grey_edge.xml" value="0.1505" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/drawable/round.xml" value="0.1225" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/drawable/round_edge.xml" value="0.1" />
@@ -37,6 +38,7 @@
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_play_list.xml" value="0.15572916666666667" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_playlist_detail.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_statics.xml" value="0.2" />
+        <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_title.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_write.xml" value="0.20969202898550723" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/activity_writing.xml" value="0.16799999999999998" />
         <entry key="..\:/Users/lg/AndroidStudioProjects/diary/app/src/main/res/layout/crop_dialog.xml" value="0.2" />

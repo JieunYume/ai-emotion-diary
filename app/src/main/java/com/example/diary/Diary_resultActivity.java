@@ -55,6 +55,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -98,6 +99,7 @@ public class Diary_resultActivity extends AppCompatActivity {
     private LinearLayout ll_song;
     private String flag;
     private ProgressDialog progressDialog;
+    private LinearLayout ll_comment;
 
     //일기 쓴 다음에 넘어가야하고, 홈에서 클릭하면 넘어가야 한다.
     @Override
@@ -130,6 +132,7 @@ public class Diary_resultActivity extends AppCompatActivity {
         iv_sun=findViewById(R.id.iv_sun);
         iv_crop=findViewById(R.id.iv_crop);
         scrollview=findViewById(R.id.scrollview);
+        ll_comment=findViewById(R.id.ll_comment);
         Animation animation= AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
         Animation animation1=AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale);
         progressDialog = new ProgressDialog(this);
@@ -162,6 +165,8 @@ public class Diary_resultActivity extends AppCompatActivity {
         {
             bt_crop.setVisibility(View.VISIBLE);
             tv_crop.setVisibility(View.VISIBLE);
+
+            ll_comment.setVisibility(View.INVISIBLE);
         }
 
         //setData(chart);
@@ -526,7 +531,9 @@ public class Diary_resultActivity extends AppCompatActivity {
         Gson gson = new GsonBuilder().setLenient().create();
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
+        OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).connectTimeout(120, TimeUnit.SECONDS)
+                .readTimeout(120, TimeUnit.SECONDS)
+                .writeTimeout(120, TimeUnit.SECONDS).build();
         Retrofit retrofit= new Retrofit.Builder()
                 .baseUrl("http://43.202.124.240:5000/")
                 .addConverterFactory(GsonConverterFactory.create(gson))

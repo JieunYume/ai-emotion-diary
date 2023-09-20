@@ -14,6 +14,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -30,6 +31,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.bumptech.glide.Glide;
 import com.example.diary.diaryList.diary_listAdapter;
 import com.example.diary.diaryList.diary_listItem;
 import com.example.diary.groupList.group_listAdapter;
@@ -49,6 +51,7 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Collections;
 import android.os.AsyncTask;
@@ -98,7 +101,7 @@ public class HomeActivity extends Fragment {
     ArrayList<group_listItem> group_list = new ArrayList<>();
     private group_listAdapter group_adapter=null;
     private diary_listAdapter diary_adapter=null;
-    private static Long group_id=1L;
+    private static Long group_id=1l;
     Boolean diary_exits=false;
     private int calender_flag=0; //0이면 my, 1이면 all, 2이면 그룹 다이어리 리스트를 보여줌
 
@@ -134,6 +137,26 @@ public class HomeActivity extends Fragment {
         group_adapter=new group_listAdapter(view, getContext(),group_list);
 
 
+        Glide.with(getContext()).load(imgUrl).into(iv_my);
+
+        /*try {
+            URL url = new URL("https://mysite/images/profile.png");
+
+
+            try{
+                URLConnection conn = url.openConnection();
+                conn.connect();
+
+                InputStreaem stream = conn.getInputStream();
+                Bitmap bitmap = BitmapFactory.decodeStream(is);
+
+                imageView.setImageBitmap(bitmap);
+            }
+
+        }catch(MalformedURLException e)
+        {
+
+        }*/
 
         if(queue==null)
         {
@@ -216,6 +239,7 @@ public class HomeActivity extends Fragment {
                        iv_my.setBorderWidth(0);
                        iv_all.setBorderWidth(0);
 
+                       //group_search();
                        calender_group_each(position);
 
 
@@ -240,6 +264,7 @@ public class HomeActivity extends Fragment {
 
 
                 iv_all.setBorderWidth(0);
+                group_search();
 
 
 
@@ -324,6 +349,26 @@ public class HomeActivity extends Fragment {
                 calender_flag=1;
                 if(group_flag==1)
                     ll_group.setVisibility(View.VISIBLE);
+                else
+                {
+                    ll_group.setVisibility(View.VISIBLE);
+                    group_list.add(new group_listItem(null, null,null)); //플러스 이미지
+
+                    LinearLayoutManager linearLayoutManager = new LinearLayoutManager(view.getContext());
+                    linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+
+
+                    //밑에꺼가 지금 우리가 해야할꺼
+                    group_adapter=new group_listAdapter(view, getContext(),group_list);
+
+
+                    rv_group.setLayoutManager(linearLayoutManager);
+                    //list_adapter=new HomeTimelineAdapter(listItem);
+                    //가로
+                    rv_group.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false));
+                    rv_group.setAdapter(group_adapter);
+                    group_adapter.notifyDataSetChanged();
+                }
 
                 calendar_group();
 

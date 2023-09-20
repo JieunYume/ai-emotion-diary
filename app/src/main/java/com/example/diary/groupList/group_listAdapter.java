@@ -4,6 +4,7 @@ package com.example.diary.groupList;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,12 +17,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.diary.Diary_initialActivity;
 import com.example.diary.HomeActivity;
 import com.example.diary.R;
 import com.example.diary.diaryList.diary_listAdapter;
 import com.example.diary.diaryList.diary_listItem;
 
+import java.net.URI;
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -71,21 +74,24 @@ public class group_listAdapter extends RecyclerView.Adapter<group_listAdapter.Ho
         group_listItem item = items.get(position);
 
 
-        if(position==0)
-        {
-            holder.iv_profile.setImageResource(R.drawable.profile_sample2);
-
-        }
-        if(position==1)
-            holder.iv_profile.setImageResource(R.drawable.profile_sample3);
-
-        if(TextUtils.isEmpty(item.getNickName()))      //plus
+        if(TextUtils.isEmpty(item.getImagePath()))      //plus
         {
 
             holder.iv_profile.setImageResource(R.drawable.add);
         }
         else        //다른 그룹 리스트
         {
+
+            if(position==0)
+            {
+                holder.iv_profile.setImageResource(R.drawable.hamster);
+            }
+            else if(position==1)
+            {
+
+                holder.iv_profile.setImageResource(R.drawable.cat);
+            }
+
             //homeActivity.setImageUrl(item.getImagePath(), holder.iv_profile);
         }
 
@@ -147,8 +153,12 @@ public class group_listAdapter extends RecyclerView.Adapter<group_listAdapter.Ho
                         if (mListener != null) {
 
                             mListener.onItemClick(view, pos);
-                            iv_profile.setBorderWidth(6);
-                            iv_profile.setBorderColor(Color.BLACK);
+                            if(pos!=2)
+                            {
+                                iv_profile.setBorderWidth(6);
+                                iv_profile.setBorderColor(Color.rgb(255, 136, 29));
+                            }
+
                         }
 
 

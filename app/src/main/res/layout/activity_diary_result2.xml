@@ -392,10 +392,12 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/ll_comment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="40dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:layout_marginBottom="10dp">
 
                         <View
                             android:id="@+id/divider"
@@ -415,7 +417,7 @@
 
                                 android:layout_marginLeft="20dp"
                                 android:layout_marginTop="20dp"
-                                android:src="@drawable/sample1"
+                                android:src="@drawable/hamster"
                                 app:civ_border_overlay="true" />
 
                             <LinearLayout
@@ -430,7 +432,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/poorstory"
-                                    android:text="가영"
+                                    android:text="람쥐람쥐"
                                     android:textColor="@color/black"
                                     android:textSize="15dp" />
 
@@ -474,7 +476,7 @@
                                 android:layout_marginLeft="20dp"
                                 android:layout_marginTop="20dp"
                                 android:layout_marginBottom="10dp"
-                                android:src="@drawable/sample2"
+                                android:src="@drawable/rabbit"
                                 app:civ_border_overlay="true" />
 
                             <LinearLayout
@@ -489,7 +491,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/poorstory"
-                                    android:text="지은"
+                                    android:text="me"
                                     android:textColor="@color/black"
                                     android:textSize="15dp" />
 
@@ -508,7 +510,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="15dp"
                                     android:fontFamily="@font/poorstory"
-                                    android:text="2023.09.18" />
+                                    android:text="2023.09.20" />
                             </LinearLayout>
                         </LinearLayout>
 
