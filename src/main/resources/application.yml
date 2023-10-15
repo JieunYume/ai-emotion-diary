@@ -1,0 +1,24 @@
+spring:
+  config:
+    import:
+      - classpath:/application-db.yml
+      - classpath:/application-mail.yml
+      - classpath:/application-s3.yml
+  servlet:
+    multipart:
+      enabled: true
+      max-request-size: 30MB
+      max-file-size: 20MB
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true #To beautify or pretty print the SQL
+        show_sql: true #show sql
+
+logging.level:
+  org.hibernate.SQL: debug
+  org.hibernate.orm.jdbc.bind: trace #스프링 부트 3.x, hibernate6
+  org.springframework.core.LocalVariableTableParameterNameDiscoverer: error
