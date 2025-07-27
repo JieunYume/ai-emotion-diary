@@ -2,7 +2,7 @@
 ## 📐 ERD 설계
 <img src="https://github.com/user-attachments/assets/d860c11a-3793-4fbb-a282-0912b65864d6" width=100%/>
 
-## 🧩 주요 관계 설명
+### 🧩 주요 관계 설명
 - 이 프로젝트의 데이터베이스는 회원, 일기, 감정, 댓글, 좋아요, 일기 분석 결과(감정 결과, 음악, 명언)으로 구성되어 있습니다.
 - 1️⃣ 회원 (members)
   - 하나의 회원은 여러 개의 **일기(diaries)**를 작성할 수 있습니다.
@@ -16,3 +16,7 @@
 - 3️⃣ 일기 분석 결과(mood_analysis_result, music_playlists, quotes)
   - 감정 결과(mood_analysis_result)는 6가지(기쁨, 당황, 분노, 불안, 상처, 슬픔)가 속성으로 들어갑니다.
  
+## API 설계
+<img width="300" height="727" alt="image" src="https://github.com/user-attachments/assets/f0577bcf-72e9-48fa-8cd2-9815706bd49d" />
+<img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/bee61130-d955-463c-ad8f-e9d22af30b8b" />
+
