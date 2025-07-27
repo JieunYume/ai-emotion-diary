@@ -19,12 +19,10 @@
 </a>
 
 ## 🖥️ 최종 구현 화면
-<div align="center">
-  <a href="https://github.com/user-attachments/assets/ef5c98e5-4634-4006-810f-9da27166c145" target="_blank">
-    <img src="https://github.com/user-attachments/assets/3767a3e2-7484-4bdd-928a-54747e9c4052" width="300" />
-  </a>
-  <img src="https://github.com/user-attachments/assets/3767a3e2-7484-4bdd-928a-54747e9c4052" width="300"/>
-</div>
+
+https://github.com/user-attachments/assets/ef5c98e5-4634-4006-810f-9da27166c145
+
+<img src="https://github.com/user-attachments/assets/3767a3e2-7484-4bdd-928a-54747e9c4052" width="300"/>
 <div align="center">
   <img src="https://github.com/user-attachments/assets/bfa8cfad-b2d3-49f7-85bf-69788ac45b22" width="200"/>
   <img src="https://github.com/user-attachments/assets/38ab3d3c-a799-41ca-bd47-98bd1ce8d737" width="666"/>
