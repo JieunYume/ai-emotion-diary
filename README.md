@@ -8,10 +8,10 @@
 - 📄 **한국정보처리학회 ACK 2023 논문 게재**
   - [논문 바로가기 🔗](https://kiss.kstudy.com/Detail/Ar?key=4059511)
 - **KBS MNC팀 사내 매거진(2024년 3월호) 기고문 게재**
-<div align="center"> <img src="https://github.com/user-attachments/assets/a9b9449b-3871-4939-862a-04678f406dea" width="300"/> <img src="https://github.com/user-attachments/assets/64b87514-be55-4d06-843a-9d921059f1e7" width="300"/> </div>
+<div align="center"> <img src="https://github.com/user-attachments/assets/feb16b1d-aa1e-44e1-aaf3-09037231a013" width="300"/> <img src="https://github.com/user-attachments/assets/a9b9449b-3871-4939-862a-04678f406dea" width="300"/> <img src="https://github.com/user-attachments/assets/64b87514-be55-4d06-843a-9d921059f1e7" width="300"/> </div>
 
-- 부산대학교 생명자원과학대학 캡스톤디자인 경진대회 참가
-<div align="center"> <img src="https://github.com/user-attachments/assets/96055e45-4221-4ef2-be27-dbae33f2a429" width="300"/> </div>
+## 포스터(부산대학교 생명자원과학대학 캡스톤디자인 경진대회 참가)
+<div align="center"> <img src="https://github.com/user-attachments/assets/96055e45-4221-4ef2-be27-dbae33f2a429" width="500"/> </div>
 
 ## 🎬 시연 영상
 <a href="https://www.youtube.com/watch?v=qILtQAYQ0WI" target="_blank">
@@ -19,10 +19,18 @@
 </a>
 
 ## 🖥️ 최종 구현 화면
-<img width="1293" height="826" alt="image" src="https://github.com/user-attachments/assets/68ea6eb2-2d04-4615-981d-7cd409cb66fb" />
-<img width="1080" height="3365" alt="image" src="https://github.com/user-attachments/assets/3767a3e2-7484-4bdd-928a-54747e9c4052" />'
+<div align="center">
+  <a href="https://github.com/user-attachments/assets/ef5c98e5-4634-4006-810f-9da27166c145" target="_blank">
+    <img src="https://github.com/user-attachments/assets/3767a3e2-7484-4bdd-928a-54747e9c4052" width="300" />
+  </a>
+  <img src="https://github.com/user-attachments/assets/3767a3e2-7484-4bdd-928a-54747e9c4052" width="300"/>
+</div>
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/bfa8cfad-b2d3-49f7-85bf-69788ac45b22" width="200"/>
+  <img src="https://github.com/user-attachments/assets/38ab3d3c-a799-41ca-bd47-98bd1ce8d737" width="666"/>
+</div>
 
-https://github.com/user-attachments/assets/ef5c98e5-4634-4006-810f-9da27166c145
+
 
 
 
