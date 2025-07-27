@@ -9,7 +9,9 @@
   - [논문 바로가기 🔗](https://kiss.kstudy.com/Detail/Ar?key=4059511)
 - **KBS MNC팀 사내 매거진(2024년 3월호) 기고문 게재**
 <img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/a9b9449b-3871-4939-862a-04678f406dea" />
-<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/64b87514-be55-4d06-843a-9d921059f1e7" /> 
+<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/64b87514-be55-4d06-843a-9d921059f1e7" />
+- 부산대학교 생명자원과학대학 캡스톤디자인 경진대회 참가
+<img width="300" height="500" alt="image" src="https://github.com/user-attachments/assets/96055e45-4221-4ef2-be27-dbae33f2a429" />
 
 ## 🎬 시연 영상
 <a href="https://www.youtube.com/watch?v=qILtQAYQ0WI" target="_blank">
