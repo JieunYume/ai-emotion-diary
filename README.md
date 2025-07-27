@@ -8,10 +8,10 @@
 - 📄 **한국정보처리학회 ACK 2023 논문 게재**
   - [논문 바로가기 🔗](https://kiss.kstudy.com/Detail/Ar?key=4059511)
 - **KBS MNC팀 사내 매거진(2024년 3월호) 기고문 게재**
-<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/a9b9449b-3871-4939-862a-04678f406dea" />
-<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/64b87514-be55-4d06-843a-9d921059f1e7" />
+<div align="center"> <img src="https://github.com/user-attachments/assets/a9b9449b-3871-4939-862a-04678f406dea" width="300"/> <img src="https://github.com/user-attachments/assets/64b87514-be55-4d06-843a-9d921059f1e7" width="300"/> </div>
+
 - 부산대학교 생명자원과학대학 캡스톤디자인 경진대회 참가
-<img width="300" height="500" alt="image" src="https://github.com/user-attachments/assets/96055e45-4221-4ef2-be27-dbae33f2a429" />
+<div align="center"> <img src="https://github.com/user-attachments/assets/96055e45-4221-4ef2-be27-dbae33f2a429" width="300"/> </div>
 
 ## 🎬 시연 영상
 <a href="https://www.youtube.com/watch?v=qILtQAYQ0WI" target="_blank">
@@ -20,6 +20,12 @@
 
 ## 🖥️ 최종 구현 화면
 <img width="1293" height="826" alt="image" src="https://github.com/user-attachments/assets/68ea6eb2-2d04-4615-981d-7cd409cb66fb" />
+<img width="1080" height="3365" alt="image" src="https://github.com/user-attachments/assets/3767a3e2-7484-4bdd-928a-54747e9c4052" />'
+
+https://github.com/user-attachments/assets/ef5c98e5-4634-4006-810f-9da27166c145
+
+
+
 
 ## 💡 대표 기능
 <img width="1716" height="281" alt="image" src="https://github.com/user-attachments/assets/9bf6f6bf-7a9b-4b15-a681-e799a1f0cdd4" />
